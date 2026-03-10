@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yakit_radar">
+
+    <!-- İnternet izni -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Konum izinleri -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <application
+        android:name="${applicationName}"
+        android:label="yakit_radar"
+        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="true">
+
+        <!-- Google Maps için API key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCdjW-kD7rfoZ7xieNJPTZGNQPDAbc-Td4" />
+
+        <!-- Google Places API key -->
+        <meta-data
+            android:name="com.google.android.libraries.places.API_KEY"
+            android:value="AIzaSyCdjW-kD7rfoZ7xieNJPTZGNQPDAbc-Td4" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
